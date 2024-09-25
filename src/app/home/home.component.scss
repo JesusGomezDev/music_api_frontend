@@ -1,0 +1,39 @@
+.landing-page {
+  text-align: center;
+  padding: 20px;
+  min-height: 89vh;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #191a1a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #323435;
+    }
+  }
+}
+
+footer {
+  background-color: #191a1a;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}

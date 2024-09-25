@@ -1,0 +1,30 @@
+<div class="side-bar">
+  <div class="section" (click)="toggleSection('about')">
+    <h3>About</h3>
+    <div class="subtitles" *ngIf="sections.about">
+      <a href="#about1">About 1</a>
+      <a href="#about2">About 2</a>
+    </div>
+  </div>
+  <div class="section" (click)="toggleSection('rest')">
+    <h3>REST</h3>
+    <div class="subtitles" *ngIf="sections.rest">
+      <a href="#rest1">REST 1</a>
+      <a href="#rest2">REST 2</a>
+    </div>
+  </div>
+  <div class="section" (click)="toggleSection('graphql')">
+    <h3>GraphQL</h3>
+    <div class="subtitles" *ngIf="sections.graphql">
+      <a href="#graphql1">GraphQL 1</a>
+      <a href="#graphql2">GraphQL 2</a>
+    </div>
+  </div>
+  <div class="section" (click)="toggleSection('resources')">
+    <h3>Resources</h3>
+    <div class="subtitles" *ngIf="sections.resources">
+      <a href="#resources1">Resource 1</a>
+      <a href="#resources2">Resource 2</a>
+    </div>
+  </div>
+</div>

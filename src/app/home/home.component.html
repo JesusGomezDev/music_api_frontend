@@ -1,0 +1,10 @@
+<div class="landing-page">
+  <h1>Features</h1>
+  <div class="features">
+    <app-card *ngFor="let feature of features" [title]="feature.title" [description]="feature.description" [logo]="feature.logo"></app-card>
+  </div>
+  <button (click)="goToDocs()">Documentation</button>
+</div>
+<footer>
+  <app-footer></app-footer>
+</footer>

@@ -1,0 +1,24 @@
+.side-bar {
+  .section {
+    color: #ffffff;
+    cursor: pointer;
+    h3 {
+      margin: 0;
+      padding: 10px;
+      background-color: #191a1a;
+      border-bottom: 1px solid #323435;
+    }
+    .subtitles {
+      display: grid;
+      flex-direction: column;
+      a {
+        padding: 10px;
+        text-decoration: none;
+        color: #e0e0e0;
+        &:hover {
+          background-color: #323435;
+        }
+      }
+    }
+  }
+}
