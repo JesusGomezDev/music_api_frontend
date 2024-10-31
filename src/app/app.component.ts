@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { filter } from 'rxjs';
+import { About1Component } from "./about-1/about-1.component";
+import { ArtstsRestComponent } from "./artsts-rest/artsts-rest.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, NavBarComponent, SideBarComponent],
+  imports: [CommonModule, RouterModule, NavBarComponent, SideBarComponent, About1Component, ArtstsRestComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -16,6 +18,7 @@ export class AppComponent {
   title = 'MusicAPI';
   showNavBar = false;
   showSideBar = false;
+  selectedContent: string | null = null;
 
   constructor(private router: Router) {
     this.router.events.pipe(
@@ -30,5 +33,9 @@ export class AppComponent {
   private updateVisibility(url: string) {
     this.showNavBar = url.includes('/docs') || url.includes('/api_key');
     this.showSideBar = url.includes('/docs');
+  }
+
+  onContentSelected(content: string) {
+    this.selectedContent = content;
   }
 }

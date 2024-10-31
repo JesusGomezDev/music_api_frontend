@@ -27,7 +27,7 @@ export class HomeComponent {
     },
     {
       title: 'Filters',
-      description: 'Filter products by price, title, and category, enabling the creation of sophisticated UIs based on these criteria.',
+      description: 'Filter products by title, artist, and album enabling the creation of sophisticated UIs based on these criteria.',
       logo: './assets/filter.svg'
     },
     {

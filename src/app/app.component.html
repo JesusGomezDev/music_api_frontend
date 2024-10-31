@@ -3,9 +3,21 @@
 </nav>
 <main [class.with-navbar]="showNavBar" [class.with-sidebar]="showSideBar" class="main">
   <aside *ngIf="showSideBar" class="sidebar">
-    <app-side-bar></app-side-bar>
+    <app-side-bar (contentSelected)="onContentSelected($event)"></app-side-bar>
   </aside>
   <section class="content">
-    <router-outlet></router-outlet>
+    <div *ngIf="selectedContent === 'Introduction'">
+      <app-about-1></app-about-1>
+    </div>
+    <div *ngIf="selectedContent === 'about2'">API Key</div>
+    <div *ngIf="selectedContent === 'rest1'">
+      <app-artsts-rest></app-artsts-rest>
+    </div>
+    <div *ngIf="selectedContent === 'rest2'">Album</div>
+    <div *ngIf="selectedContent === 'rest3'">Track</div>
+    <div *ngIf="selectedContent === 'graphql1'">Contenido de GraphQL 1</div>
+    <div *ngIf="selectedContent === 'graphql2'">Contenido de GraphQL 2</div>
+    <div *ngIf="selectedContent === 'resources1'">Contenido de Postman files</div>
+    <router-outlet *ngIf="!selectedContent"></router-outlet>
   </section>
 </main>

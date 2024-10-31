@@ -1,0 +1,36 @@
+<!-- artsts-rest.component.html -->
+<section class="api-endpoints">
+  <h2>API Endpoints</h2>
+
+  <div *ngFor="let endpoint of endpoints" class="endpoint">
+    <h3>{{ endpoint.title }}</h3>
+    <p [innerHTML]="endpoint.description"></p>
+    <ul>
+      <li><strong>page:</strong> {{ endpoint.pagination.page }}</li>
+      <li><strong>limit:</strong> {{ endpoint.pagination.limit }}</li>
+      <li><strong>offset:</strong> {{ endpoint.pagination.offset }}</li>
+    </ul>
+    <p>
+      You can customize these values by specifying different parameters in the query to achieve the desired pagination.
+    </p>
+
+    <h4>Request:</h4>
+    <pre><code class="language-bash">{{ endpoint.request }}</code></pre>
+
+    <h4>Response:</h4>
+    <pre><code class="language-json">{{ endpoint.formattedResponse }}</code></pre>
+
+    <h4>Examples in Different Languages:</h4>
+    <div class="language-buttons">
+      <button (click)="changeLanguage('python')" [class.active]="selectedLanguage === 'python'">Python</button>
+      <button (click)="changeLanguage('node')" [class.active]="selectedLanguage === 'node'">Node</button>
+      <button (click)="changeLanguage('csharp')" [class.active]="selectedLanguage === 'csharp'">C#</button>
+      <button (click)="changeLanguage('go')" [class.active]="selectedLanguage === 'go'">Go</button>
+    </div>
+
+    <pre *ngIf="selectedLanguage === 'python'"><code class="language-python">{{ endpoint.examples.python }}</code></pre>
+    <pre *ngIf="selectedLanguage === 'node'"><code class="language-javascript">{{ endpoint.examples.node }}</code></pre>
+    <pre *ngIf="selectedLanguage === 'csharp'"><code class="language-csharp">{{ endpoint.examples.csharp }}</code></pre>
+    <pre *ngIf="selectedLanguage === 'go'"><code class="language-go">{{ endpoint.examples.go }}</code></pre>
+  </div>
+</section>

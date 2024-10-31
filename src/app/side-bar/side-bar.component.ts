@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 type Section = 'about' | 'rest' | 'graphql' | 'resources';
@@ -11,6 +11,8 @@ type Section = 'about' | 'rest' | 'graphql' | 'resources';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent {
+  @Output() contentSelected = new EventEmitter<string>();
+
   sections: Record<Section, boolean> = {
     about: false,
     rest: false,
@@ -20,5 +22,9 @@ export class SideBarComponent {
 
   toggleSection(section: Section) {
     this.sections[section] = !this.sections[section];
+  }
+
+  selectContent(content: string) {
+    this.contentSelected.emit(content);
   }
 }

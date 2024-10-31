@@ -1,0 +1,97 @@
+.api-endpoints {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #ccc;
+
+  h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.5rem;
+  }
+
+  .endpoint {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #191a1a;
+    border-radius: 8px;
+
+    h3 {
+      font-size: 1.5rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #fff;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    code {
+      background-color: #000;
+      color: #ccc;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    pre {
+      background-color: #000;
+      color: #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+
+      .json-key {
+        color: #d19a66; // Color para las claves
+      }
+
+      .json-string {
+        color: #98c379; // Color para los valores de tipo string
+      }
+
+      .json-number {
+        color: #61afef; // Color para los valores de tipo número
+      }
+
+      .json-boolean {
+        color: #e06c75; // Color para los valores de tipo booleano
+      }
+
+      .json-null {
+        color: #c678dd; // Color para los valores null
+      }
+    }
+  }
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  button {
+    background-color: #191a1a;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    &.active {
+      background-color: #333;
+      border-color: #fff;
+    }
+  }
+}
